@@ -1,6 +1,8 @@
 modules:
   # Default IF-MIB interfaces table with ifIndex.
   if_mib:
+    auth:
+      community: Orchard#2041 
     walk: [sysUpTime, interfaces, ifXTable]
     lookups:
       - source_indexes: [ifIndex]
