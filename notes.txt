@@ -1,0 +1,3 @@
+docker build -t prom/snmp_exporter .
+
+docker run -d --network deploy_data --name snmp_exporter -v /home/zuser/gh_clone/snmp_exporter/snmp.yml:/etc/snmp_exporter/snmp.yml -p 9116:9116 prom/snmp-exporter:v0.20.0 
